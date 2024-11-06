@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1Script : MonoBehaviour
+public class Player2Script : MonoBehaviour
 {
     [SerializeField] float forceX = 5, forceY = 5;
     float xInput;
@@ -14,7 +13,7 @@ public class Player1Script : MonoBehaviour
     [SerializeField] LayerMask groundMask;
 
     bool isGround;
-    bool facingRight = true;
+    bool facingRight = false;
     //bool isDead = false;
     Rigidbody2D rb;
     Animator animator;
@@ -30,10 +29,10 @@ public class Player1Script : MonoBehaviour
     void Update()
     {
         CollisionCheck();
-        xInput = Input.GetAxisRaw("Horizontal");
+        xInput = Input.GetAxisRaw("Horizontal_P2");
         Movement();
         Flip();
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.Keypad2))
         {
             Jump();
         }
@@ -42,9 +41,9 @@ public class Player1Script : MonoBehaviour
 
     private void AnimationController()
     {
-        animator.SetFloat("xVelocity",rb.velocity.x);
-        animator.SetBool("isGround",isGround);
-        animator.SetFloat("yVelocity",rb.velocity.y);
+        animator.SetFloat("xVelocity", rb.velocity.x);
+        animator.SetBool("isGround", isGround);
+        animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     private void Jump()
@@ -80,5 +79,4 @@ public class Player1Script : MonoBehaviour
     {
         isGround = Physics2D.OverlapCircle(groundCheck.transform.position, groundCheckRadius, groundMask);
     }
-
 }

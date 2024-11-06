@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9a758e154eb16704782c30debbe36350
+guid: 597a290cd30987a478d5755b17ddc6db
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,64 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hurt_0
+      name: Fire_1_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 0
-        width: 74
-        height: 125
+        x: 12
+        y: 38
+        width: 188
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ade0acdc5aea92341b9c822077cb20ae
-      internalID: 1580679493
+      spriteID: 71b61d3595eacd8409c380cc97e8fe89
+      internalID: -432239765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hurt_1
+      name: Fire_1_1
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 75
-        height: 125
+        x: 238
+        y: 38
+        width: 161
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e305722db773084d95215a3ec7057e5
-      internalID: 1394426156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hurt_2
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 0
-        width: 79
-        height: 125
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef73d3809d0b80a4785550e2efb91947
-      internalID: 2012834650
+      spriteID: abb649b96cace374f963c82de607a071
+      internalID: -946108527
       vertices: []
       indices: 
       edges: []
@@ -170,9 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hurt_0: 1580679493
-      Hurt_1: 1394426156
-      Hurt_2: 2012834650
+      Fire_1_0: -432239765
+      Fire_1_1: -946108527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

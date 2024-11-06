@@ -97,27 +97,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack_2_0
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 76
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 936524cb37950d542ad181dd274947a3
-      internalID: 166563838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Attack_2_1
       rect:
         serializedVersion: 2
@@ -126,7 +105,7 @@ TextureImporter:
         width: 89
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_22
+      name: Attack_2_9
       rect:
         serializedVersion: 2
         x: 1172
@@ -147,7 +126,7 @@ TextureImporter:
         width: 70
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_23
+      name: Attack_2_0
       rect:
         serializedVersion: 2
         x: 20
@@ -168,7 +147,7 @@ TextureImporter:
         width: 77
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +168,7 @@ TextureImporter:
         width: 89
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +189,7 @@ TextureImporter:
         width: 95
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +210,7 @@ TextureImporter:
         width: 91
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +231,7 @@ TextureImporter:
         width: 99
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +252,7 @@ TextureImporter:
         width: 92
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +273,7 @@ TextureImporter:
         width: 100
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +294,7 @@ TextureImporter:
         width: 98
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +317,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack_2_0: 166563838
+      Attack_2_0: 878485166
       Attack_2_1: 246066167
       Attack_2_10: -176051333
       Attack_2_11: -541628597
@@ -353,8 +332,6 @@ TextureImporter:
       Attack_2_2: 983679102
       Attack_2_20: -226029844
       Attack_2_21: -1827262046
-      Attack_2_22: -1570140086
-      Attack_2_23: 878485166
       Attack_2_24: 1174209958
       Attack_2_25: 1049493451
       Attack_2_27: -1083414636
@@ -389,7 +366,7 @@ TextureImporter:
       Attack_2_6: 221514296
       Attack_2_7: -1753008338
       Attack_2_8: 519131312
-      Attack_2_9: -669135525
+      Attack_2_9: -1570140086
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

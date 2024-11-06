@@ -226,9 +226,9 @@ TextureImporter:
       name: Attack_1_6
       rect:
         serializedVersion: 2
-        x: 789
+        x: 767
         y: 0
-        width: 49
+        width: 71
         height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -302,48 +302,6 @@ TextureImporter:
       bones: []
       spriteID: 3f7a2a2582ce6c948a823f82631828bd
       internalID: 1851691177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_1_21
-      rect:
-        serializedVersion: 2
-        x: 769
-        y: 2
-        width: 7
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d26194d47e271e64186d785aeed44b2c
-      internalID: -483304827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_1_22
-      rect:
-        serializedVersion: 2
-        x: 779
-        y: 1
-        width: 7
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b171e0adb0d83414880149f6d4994a68
-      internalID: -2065614959
       vertices: []
       indices: 
       edges: []

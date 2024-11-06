@@ -22,6 +22,7 @@ public class Player2Script : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.transform.rotation = Quaternion.Euler(0,180,0);
         animator = gameObject.GetComponent<Animator>();
     }
 

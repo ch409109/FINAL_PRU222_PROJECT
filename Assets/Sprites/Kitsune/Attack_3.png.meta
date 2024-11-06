@@ -103,9 +103,9 @@ TextureImporter:
         x: 23
         y: 0
         width: 52
-        height: 80
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -124,9 +124,9 @@ TextureImporter:
         x: 150
         y: 0
         width: 54
-        height: 80
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,9 +145,9 @@ TextureImporter:
         x: 278
         y: 0
         width: 57
-        height: 80
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,9 +166,9 @@ TextureImporter:
         x: 405
         y: 0
         width: 65
-        height: 80
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,15 +181,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3_4
+      name: Attack_3_10
       rect:
         serializedVersion: 2
         x: 470
-        y: 42
+        y: 41
         width: 9
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,15 +202,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3_5
+      name: Attack_3_4
       rect:
         serializedVersion: 2
         x: 532
         y: 0
         width: 66
-        height: 77
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3_6
+      name: Attack_3_11
       rect:
         serializedVersion: 2
         x: 597
@@ -231,7 +231,7 @@ TextureImporter:
         width: 14
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,15 +244,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3_7
+      name: Attack_3_5
       rect:
         serializedVersion: 2
         x: 657
         y: 0
         width: 69
-        height: 81
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3_8
+      name: Attack_3_12
       rect:
         serializedVersion: 2
         x: 725
@@ -273,7 +273,7 @@ TextureImporter:
         width: 14
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,15 +286,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3_9
+      name: Attack_3_6
       rect:
         serializedVersion: 2
         x: 791
         y: 0
         width: 63
-        height: 80
+        height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_3_10
+      name: Attack_3_13
       rect:
         serializedVersion: 2
         x: 853
@@ -315,7 +315,7 @@ TextureImporter:
         width: 20
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -340,15 +340,15 @@ TextureImporter:
     nameFileIdTable:
       Attack_3_0: 857698215
       Attack_3_1: -1918920401
-      Attack_3_10: 2008936293
+      Attack_3_10: 347179915
+      Attack_3_11: -335111464
+      Attack_3_12: -1063662110
+      Attack_3_13: 2008936293
       Attack_3_2: 372136458
       Attack_3_3: 438578551
-      Attack_3_4: 347179915
-      Attack_3_5: 1491854174
-      Attack_3_6: -335111464
-      Attack_3_7: 618673621
-      Attack_3_8: -1063662110
-      Attack_3_9: -747793884
+      Attack_3_4: 1491854174
+      Attack_3_5: 618673621
+      Attack_3_6: -747793884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

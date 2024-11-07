@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5225821013556074062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8127424440746437451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2454770512944885071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6310570246892871611}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6310570246892871611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2454770512944885071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.33, y: -0.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8127424440746437451}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2728486224752098791
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7210138732165633726}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: YGroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,9 +108,9 @@ GameObject:
   - component: {fileID: 4599345285090063909}
   - component: {fileID: 7941671127048256324}
   - component: {fileID: 3180693944965569525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Yamabushi_tengu
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +130,7 @@ Transform:
   m_Children:
   - {fileID: 7210138732165633726}
   - {fileID: 5225821013556074062}
+  - {fileID: 6310570246892871611}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5901371222787653512
@@ -306,6 +338,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167d43d5728ee1448a441eb31cd9dfe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPointRadius: 0.15
+  attackPoint: {fileID: 6310570246892871611}
+  player2Mask:
+    serializedVersion: 2
+    m_Bits: 64
+  attack1dame: 20
   firePoint: {fileID: 5225821013556074062}
   secondSkillBulletPrefab: {fileID: 56955134684883502, guid: 4c1784abd2b4eb244801039e5bd3da0c, type: 3}
   secondSkillBulletSpeed: 10

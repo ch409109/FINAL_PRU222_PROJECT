@@ -10,14 +10,24 @@ public class Yamabushi_TenguAttack : MonoBehaviour
     private Player1Script playerScript;
     private bool facingRight;
 
+    [Header("Attack 1")]
+    [SerializeField] float attackPointRadius;
+    [SerializeField] Transform attackPoint;
+    [SerializeField] LayerMask player2Mask;
+    [SerializeField] float attack1dame;
+
     [Header("Attack 2")]
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject secondSkillBulletPrefab;
     [SerializeField] private float secondSkillBulletSpeed;
+    [SerializeField] private float attack2Cooldown = 6f;
+    private float nextAttack2Time = 0f;
 
     [Header("Attack 3")]
     [SerializeField] private GameObject thirdSkillBulletPrefab;
     [SerializeField] private float thirdSkillBulletSpeed;
+    [SerializeField] private float attack3Cooldown = 12f;
+    private float nextAttack3Time = 0f;
 
     void Start()
     {
@@ -37,14 +47,32 @@ public class Yamabushi_TenguAttack : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1)) Attack_1();
-        if (Input.GetKeyDown(KeyCode.Keypad4)) Attack_2();
-        if (Input.GetKeyDown(KeyCode.Keypad5)) Attack_3();
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Attack_1();
+        }
+
+        if (Input.GetKeyDown(KeyCode.U) && Time.time >= nextAttack2Time)
+        {
+            Attack_2();
+            nextAttack2Time = Time.time + attack2Cooldown;
+        }
+
+        if (Input.GetKeyDown(KeyCode.I) && Time.time >= nextAttack3Time)
+        {
+            Attack_3();
+            nextAttack3Time = Time.time + attack3Cooldown;
+        }
     }
 
     private void Attack_1()
     {
         animator.SetTrigger("Attack_1");
+        Collider2D[] Player2 = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackPointRadius, player2Mask);
+        foreach (Collider2D player in Player2)
+        {
+            player.GetComponent<Player2Script>().TakeDamage(attack1dame);
+        }
     }
 
     private void Attack_2()
@@ -97,5 +125,9 @@ public class Yamabushi_TenguAttack : MonoBehaviour
         Destroy(newThirdSkillBullet, 10);
 
         isShooting = false;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackPoint.transform.position, attackPointRadius);
     }
 }

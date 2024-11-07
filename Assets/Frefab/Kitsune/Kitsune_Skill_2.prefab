@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 9008367725844759290}
   - component: {fileID: -1623250342918906296}
   - component: {fileID: 2735042605929313143}
+  - component: {fileID: 7861680646694505585}
   m_Layer: 0
   m_Name: Kitsune_Skill_2
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4230210375329559897}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8826408367957643366
@@ -134,7 +136,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &2735042605929313143
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -185,3 +187,52 @@ PolygonCollider2D:
       - {x: 0.14, y: 0.13}
       - {x: 0.08, y: 0.17}
   m_UseDelaunayMesh: 0
+--- !u!114 &7861680646694505585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683510142710334327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11eb4e7752052ba48b20c6c38cda26a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPointRadius: 0.15
+  attackPoint: {fileID: 4230210375329559897}
+  player2Mask:
+    serializedVersion: 2
+    m_Bits: 64
+  attack1dame: 15
+--- !u!1 &6238997079999629541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4230210375329559897}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4230210375329559897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238997079999629541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2496456081153511900}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

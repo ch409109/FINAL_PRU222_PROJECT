@@ -84,5 +84,8 @@ public class Player1Script : MonoBehaviour
     {
         isGround = Physics2D.OverlapCircle(groundCheck.transform.position, groundCheckRadius, groundMask);
     }
-
+    public void TakeDamage(float damage)
+    {
+        Debug.Log(damage);
+    }
 }

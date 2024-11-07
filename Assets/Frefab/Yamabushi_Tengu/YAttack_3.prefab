@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -651155343572214016}
   m_Layer: 0
   m_Name: YAttack_3
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.21, y: 1.11}
+    oldSize: {x: 4.42, y: 2.22}
     newSize: {x: 2.21, y: 1.11}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -219,4 +219,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Item
+  - Bullet
+  - Player1
+  - Bullet1
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
+  - SecondPlayer
+  - Player
   - 
   - 
   - 

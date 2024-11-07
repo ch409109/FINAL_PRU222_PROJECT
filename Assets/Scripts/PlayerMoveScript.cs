@@ -11,6 +11,11 @@ public class PlayerMoveScript : MonoBehaviour
     private bool isJumping;
     private bool facingRight = true; // Biến để theo dõi hướng mặt của nhân vật
 
+    [Header("Attack Point")]
+    [SerializeField] float attackPointRadius;
+    [SerializeField] Transform attackPoint;
+    [SerializeField] LayerMask player2Mask;
+    [SerializeField] float attackdame = 10;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -44,11 +49,18 @@ public class PlayerMoveScript : MonoBehaviour
         // Kiểm tra nhảy
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.1f)
         {
-            rb.AddForce(new Vector2(0f, 10f), ForceMode2D.Impulse);
             isJumping = true;
+            rb.AddForce(new Vector2(0f, 1000f), ForceMode2D.Impulse);
         }
     }
-
+    private void DealDame()
+    {
+        Collider2D[] Player2 = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackPointRadius, player2Mask);
+        foreach (Collider2D player in Player2)
+        {
+            player.GetComponent<Player2Script>().TakeDamage(attackdame);
+        }
+    }
     void Flip()
     {
         // Đảo hướng nhân vật
@@ -63,39 +75,37 @@ public class PlayerMoveScript : MonoBehaviour
         // Set các trạng thái di chuyển và nhảy
 
         animator.SetBool("isMoving", isMoving);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             animator.SetTrigger("isJumping");
         }
-        // Các hành động khác
-        if (Input.GetKeyDown(KeyCode.F)) // Ví dụ kích hoạt TakeDamage
-        {
-            animator.SetTrigger("TakeDamage");
-        }
 
-        if (Input.GetKeyDown(KeyCode.G)) // Ví dụ kích hoạt ComboAttack
+        if (Input.GetKeyDown(KeyCode.J)) // Ví dụ kích hoạt ComboAttack
         {
             animator.SetTrigger("ComboAttack");
         }
 
-        if (Input.GetKeyDown(KeyCode.H)) // Ví dụ kích hoạt Knockout
-        {
-            animator.SetTrigger("Knockout");
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha1)) // Kích hoạt Skill1
+        if (Input.GetKeyDown(KeyCode.U)) // Kích hoạt Skill1
         {
             animator.SetTrigger("Skill1");
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2)) // Kích hoạt Skill2
+        if (Input.GetKeyDown(KeyCode.I)) // Kích hoạt Skill2
         {
             animator.SetTrigger("Skill2");
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3)) // Kích hoạt Skill3
+        if (Input.GetKeyDown(KeyCode.O)) // Kích hoạt Skill3
         {
             animator.SetTrigger("Skill3");
         }
+    }
+    public void TakeDamage(float damage)
+    {
+        Debug.Log(damage);
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackPoint.transform.position, attackPointRadius);
     }
 }

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 36df37e442aa70c46b9a1aea48f5b5b4
   - enabled: 1
+    path: Assets/Scenes/SelectMap.unity
+    guid: 681a17a29b9755345addd32b539e4fd7
+  - enabled: 1
     path: Assets/Scenes/Nascenes.unity
     guid: a3d86336d5aa9f740994b52af65c8a55
   - enabled: 1

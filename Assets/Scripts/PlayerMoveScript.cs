@@ -25,7 +25,7 @@ public class PlayerMoveScript : MonoBehaviour
 
     void HandleMovement()
     {
-        float move = Input.GetAxis("Horizontal");
+        float move = Input.GetAxisRaw("Horizontal_P2");
 
         // Di chuyển
         rb.velocity = new Vector2(move * moveSpeed, rb.velocity.y);

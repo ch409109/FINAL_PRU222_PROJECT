@@ -50,6 +50,7 @@ public class KitsuneAttack : MonoBehaviour
     {
         GameObject newSecondSkillBullet = GameObject.Instantiate(secondSkillBulletPrefab, shootPoint.position, Quaternion.identity);
 
+        // lam cho dan di chuyen
         if (facingRight)
         {
             newSecondSkillBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(secondSkillBulletSpeed * 1, 0);

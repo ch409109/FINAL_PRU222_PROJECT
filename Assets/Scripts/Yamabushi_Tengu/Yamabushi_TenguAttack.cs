@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KitsuneAttack : MonoBehaviour
+public class Yamabushi_TenguAttack : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
     private bool isShooting = false;
-    private Player2Script playerScript;
+    private Player1Script playerScript;
     private bool facingRight;
 
     [Header("Attack 2")]
@@ -24,7 +23,7 @@ public class KitsuneAttack : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        playerScript = GetComponent<Player2Script>();
+        playerScript = GetComponent<Player1Script>();
     }
 
     void Update()

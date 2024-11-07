@@ -15,6 +15,10 @@ public class Player1Script : MonoBehaviour
 
     bool isGround;
     bool facingRight = true;
+    public bool FacingRight
+    {
+        get { return facingRight; }
+    }
     //bool isDead = false;
     Rigidbody2D rb;
     Animator animator;

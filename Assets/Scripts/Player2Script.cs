@@ -30,7 +30,6 @@ public class Player2Script : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
 
-    [SerializeField] private float skill1Damage = 3;
     [SerializeField] private float skill2Damage = 7;
     [SerializeField] private float skill3Damage = 12;
 

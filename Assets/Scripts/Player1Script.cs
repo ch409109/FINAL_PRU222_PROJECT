@@ -21,7 +21,6 @@ public class Player1Script : MonoBehaviour
     public float maxHP = 50;
     public float heartHeal = 5;
     public float poopDamage = 5;
-    [SerializeField] private float skill1Damage = 2;
     [SerializeField] private float skill2Damage = 5;
     [SerializeField] private float skill3Damage = 10;
 

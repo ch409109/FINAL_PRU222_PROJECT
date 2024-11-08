@@ -9,6 +9,12 @@ TagManager:
   - Bullet
   - Player1
   - Bullet1
+  - Bullet2
+  - SuperBullet2
+  - SuperBullet1
+  - Heart
+  - Poop
+  - Spawner
   layers:
   - Default
   - TransparentFX
@@ -18,10 +24,10 @@ TagManager:
   - UI
   - SecondPlayer
   - Player
-  - 
-  - 
-  - 
-  - 
+  - SuperBullet2
+  - Bullet2
+  - SuperBullet1
+  - Bullet1
   - 
   - 
   - 

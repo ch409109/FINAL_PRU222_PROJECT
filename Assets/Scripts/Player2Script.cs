@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player2Script : MonoBehaviour
 {
@@ -12,7 +13,14 @@ public class Player2Script : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
 
-    bool isGround;
+    [Header("Health Management")]
+    public UIController UIController;
+    public float currentHP;
+    public float maxHP = 50;
+    public float heartHeal = 5;
+    public float poopDamage = 5;
+
+    public bool isGround;
     bool facingRight = false;
     public bool FacingRight
     {
@@ -22,12 +30,19 @@ public class Player2Script : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
 
+    [SerializeField] private float skill1Damage = 3;
+    [SerializeField] private float skill2Damage = 7;
+    [SerializeField] private float skill3Damage = 12;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        rb.transform.rotation = Quaternion.Euler(0,180,0);
+        rb.transform.rotation = Quaternion.Euler(0, 180, 0);
         animator = gameObject.GetComponent<Animator>();
+
+        currentHP = maxHP;
+        UIController.UpdateSecondPlayerHealthBar(currentHP, maxHP);
     }
 
     // Update is called once per frame
@@ -42,6 +57,59 @@ public class Player2Script : MonoBehaviour
             Jump();
         }
         AnimationController();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet1"))
+
+        {
+            Destroy(collision.gameObject);
+            animator.SetTrigger("Hurt");
+            currentHP -= skill2Damage;
+            UIController.UpdateSecondPlayerHealthBar(currentHP, maxHP);
+
+            if (currentHP <= 0)
+            {
+                animator.SetTrigger("Dead");
+                SceneManager.LoadSceneAsync(3);
+                GameResult.ResultText = "Tengu Win";
+            }
+        }
+        if (collision.gameObject.CompareTag("SuperBullet1"))
+        {
+            Destroy(collision.gameObject);
+            animator.SetTrigger("Hurt");
+            currentHP -= skill3Damage;
+            UIController.UpdateSecondPlayerHealthBar(currentHP, maxHP);
+
+            if (currentHP <= 0)
+            {
+                animator.SetTrigger("Dead");
+                SceneManager.LoadSceneAsync(3);
+                GameResult.ResultText = "Tengu Win";
+            }
+        }
+        if (collision.gameObject.CompareTag("Heart"))
+        {
+            Destroy(collision.gameObject);
+            currentHP += heartHeal;
+            UIController.UpdateSecondPlayerHealthBar(currentHP, maxHP);
+        }
+        if (collision.gameObject.CompareTag("Poop"))
+        {
+            Destroy(collision.gameObject);
+            animator.SetTrigger("Hurt");
+            currentHP -= poopDamage;
+            UIController.UpdateSecondPlayerHealthBar(currentHP, maxHP);
+
+            if (currentHP <= 0)
+            {
+                animator.SetTrigger("Dead");
+                SceneManager.LoadSceneAsync(3);
+                GameResult.ResultText = "Tengu Win";
+            }
+        }
     }
 
     private void AnimationController()
@@ -86,6 +154,15 @@ public class Player2Script : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        Debug.Log(damage);
+        animator.SetTrigger("Hurt");
+        currentHP -= damage;
+        UIController.UpdateSecondPlayerHealthBar(currentHP, maxHP);
+
+        if (currentHP <= 0)
+        {
+            animator.SetTrigger("Dead");
+            SceneManager.LoadSceneAsync(3);
+            GameResult.ResultText = "Tengu Win";
+        }
     }
 }

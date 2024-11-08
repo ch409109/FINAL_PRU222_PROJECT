@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -8879391626828674820}
   m_Layer: 0
   m_Name: Kitsune_Skill_3
-  m_TagString: Bullet
+  m_TagString: SuperBullet2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,10 +12,6 @@ public class UIController : MonoBehaviour
     [SerializeField] private Image firstPlayerHealthBar;
     [SerializeField] private Image secondPlayerHealthBar;
 
-    [Header("Mana Bar")]
-    [SerializeField] private Image firstPlayerManaBar;
-    [SerializeField] private Image secondPlayerManaBar;
-
     [Header("Countdown Timer")]
     [SerializeField] private TextMeshProUGUI timerText;
     private float countdownTime = 120f;
@@ -56,15 +52,5 @@ public class UIController : MonoBehaviour
     public void UpdateSecondPlayerHealthBar(float curentHP, float maxHP)
     {
         secondPlayerHealthBar.fillAmount = curentHP / maxHP;
-    }
-
-    public void UpdateFirstPlayerManaBar(float currentMana, float maxMana)
-    {
-        firstPlayerManaBar.fillAmount = currentMana / maxMana;
-    }
-
-    public void UpdateSecondPlayerManaBar(float currentMana, float maxMana)
-    {
-        secondPlayerManaBar.fillAmount = currentMana / maxMana;
     }
 }

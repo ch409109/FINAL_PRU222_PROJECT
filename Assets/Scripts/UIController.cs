@@ -14,7 +14,7 @@ public class UIController : MonoBehaviour
 
     [Header("Countdown Timer")]
     [SerializeField] private TextMeshProUGUI timerText;
-    private float countdownTime = 120f;
+    private float countdownTime = 30f;
 
     void Update()
     {
